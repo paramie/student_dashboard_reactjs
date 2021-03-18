@@ -1,15 +1,11 @@
 import './App.css';
-import DashBoard from './components/dashboard';
+import DashBoard from './pages/dashboard.page';
 
 function App() {
   
   return (
     <div className="App">
-      {/* <ButtonAppBar/>
-      <ChartWidget/>
-      <SimpleCard/> */}
       <DashBoard/>
-
     </div>
   );
 }

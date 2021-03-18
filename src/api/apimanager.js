@@ -1,41 +1,49 @@
-import React from "react"; 
+import React from "react";
 import datasetOne from '../datasets/dataset1.json';
 import datasetTwo from '../datasets/dataset2.json';
 import datasetThree from '../datasets/dataset3.json';
 
-class APIManager{
-    
-    // API call to GET total marks for each subject
-    getTotalMarksForSubject(){
-        // fetch('https://api.npms.io/v2/search?q=react')
-        // .then(response => response.json())
-        // .then(data => this.setState({ totalReactPackages: data.total }));
-        return datasetOne;
+class APIManager {
+
+    // GET total marks for each subject
+    getChartOneData() {
+        var newArray = [];
+        datasetOne.forEach(mark => {
+            newArray.push({
+                subject: mark.subject_name,
+                total: Math.floor(Math.random() * 18000) + 15000,
+                average: Math.floor(Math.random() * 12000) + 9000,
+            })
+        })
+        return newArray;
     }
 
-    // API call to GET total marks for each subject for given Student ID
-    getTotalMarksForSubjectForStudentId(id){
-        // fetch('https://api.npms.io/v2/search?q=react')
-        // .then(response => response.json())
-        // .then(data => this.setState({ totalReactPackages: data.total }));
-        return datasetTwo;
+    // GET marks for each year and semester for given filter
+    getChartTwoData() {
+        var newArray = [];
+        datasetTwo.forEach(mark => {
+            newArray.push({
+                year: mark.year,
+                maths: Math.floor(Math.random() * 2700) + 1800,
+                science: Math.floor(Math.random() * 2700) + 1800,
+                english: Math.floor(Math.random() * 2700) + 1800,
+                history: Math.floor(Math.random() * 2700) + 1800,
+                social: Math.floor(Math.random() * 2700) + 1800,
+                econ: Math.floor(Math.random() * 2700) + 1800,
+                accounting: Math.floor(Math.random() * 2700) + 1800,
+                commerce: Math.floor(Math.random() * 2700) + 1800,
+                ict: Math.floor(Math.random() * 2700) + 1800
+            })
+        })
+        return newArray;
     }
 
-    // API call to GET total marks for given student, year and semester
-    getStudentSummary(id,year,semester,subject){
-        // fetch('https://api.npms.io/v2/search?q=react')
-        // .then(response => response.json())
-        // .then(data => this.setState({ totalReactPackages: data.total }));
-        return datasetThree;
-    }
-
-    // API call to GET student, year and semester data 
-    getOptionDataForDropDown(){
-        // fetch('https://api.npms.io/v2/search?q=react')
-        // .then(response => response.json())
-        // .then(data => this.setState({ totalReactPackages: data.total }));
+    // GET total marks for given student, year and semester
+    getSummaryData(filter) {
+        let total = Math.floor(Math.random() * 900) + 300;
+        return total;
     }
 
 }
-const instance = new APIManager(); 
+const instance = new APIManager();
 export default instance;

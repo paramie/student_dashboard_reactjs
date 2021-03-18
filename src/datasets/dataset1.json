@@ -1,6 +1,6 @@
 [
     {
-       "subject_name":"Mathematics",
+       "subject_name":"Maths",
        "total_mark":12500
     },
     {
@@ -16,11 +16,11 @@
          "total_mark":18000
      },
      {
-        "subject_name":"Social Science",
+        "subject_name":"Social",
         "total_mark":17300
      },
      {
-         "subject_name":"Economics",
+         "subject_name":"Econ.",
          "total_mark":16500
      },
      {
@@ -28,11 +28,11 @@
         "total_mark":15700
      },
      {
-         "subject_name":"Accounting",
+         "subject_name":"Acc.",
          "total_mark":12000
      },
      {
-        "subject_name":"Combined Maths",
+        "subject_name":"Commerce",
         "total_mark":11800
      }
 ]
