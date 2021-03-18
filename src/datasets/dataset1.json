@@ -1,0 +1,38 @@
+[
+    {
+       "subject_name":"Mathematics",
+       "total_mark":12500
+    },
+    {
+        "subject_name":"Science",
+        "total_mark":13800
+    },
+    {
+        "subject_name":"English",
+        "total_mark":16800
+     },
+     {
+         "subject_name":"History",
+         "total_mark":18000
+     },
+     {
+        "subject_name":"Social Science",
+        "total_mark":17300
+     },
+     {
+         "subject_name":"Economics",
+         "total_mark":16500
+     },
+     {
+        "subject_name":"ICT",
+        "total_mark":15700
+     },
+     {
+         "subject_name":"Accounting",
+         "total_mark":12000
+     },
+     {
+        "subject_name":"Combined Maths",
+        "total_mark":11800
+     }
+]
