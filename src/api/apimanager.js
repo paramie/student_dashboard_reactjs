@@ -3,6 +3,59 @@ import datasetOne from '../datasets/dataset1.json';
 import datasetTwo from '../datasets/dataset2.json';
 import datasetThree from '../datasets/dataset3.json';
 
+const filter_options_bar_chart = [
+    {
+        text: "Students",
+        value: 1
+    },
+    {
+        text: "Grade",
+        value: 2
+    },
+    {
+        text: "Semester",
+        value: 3
+    },
+    {
+        text: "Year",
+        value: 4
+    }
+]
+
+const filter_options_stack_chart = [
+    {
+        text: "Students",
+        value: 1
+    },
+    {
+        text: "Grade",
+        value: 2
+    },
+]
+
+const filter_options_summary = [
+    {
+        text: "Students",
+        value: 1
+    },
+    {
+        text: "Grade",
+        value: 2
+    },
+    {
+        text: "Semester",
+        value: 3
+    },
+    {
+        text: "Year",
+        value: 4
+    },
+    {
+        text: "Subject",
+        value: 5
+    },
+]
+
 class APIManager {
 
     // GET total marks for each subject
@@ -43,6 +96,22 @@ class APIManager {
         let total = Math.floor(Math.random() * 900) + 300;
         return total;
     }
+
+    // GET filter options for bar chart
+    getBarChartOptions(){
+        return filter_options_bar_chart;
+    }
+
+    // GET filter options for stack chart
+    getStackChartOptions(){
+        return filter_options_stack_chart;
+    }
+
+    // GET filter options for summary
+    getSummaryOptions(){
+        return filter_options_summary;
+    }
+    
 
 }
 const instance = new APIManager();

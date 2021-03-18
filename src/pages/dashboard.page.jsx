@@ -16,56 +16,9 @@ class DashBoard extends Component {
         this.state = {
             summary_modal: false,
             chart_modal: false,
-            filter_options_bar_chart: [
-                {
-                    text: "Students",
-                    value: 1
-                },
-                {
-                    text: "Grade",
-                    value: 2
-                },
-                {
-                    text: "Semester",
-                    value: 3
-                },
-                {
-                    text: "Year",
-                    value: 4
-                }
-            ],
-            filter_options_stack_chart: [
-                {
-                    text: "Students",
-                    value: 1
-                },
-                {
-                    text: "Grade",
-                    value: 2
-                },
-            ],
-            filter_options_summary: [
-                {
-                    text: "Students",
-                    value: 1
-                },
-                {
-                    text: "Grade",
-                    value: 2
-                },
-                {
-                    text: "Semester",
-                    value: 3
-                },
-                {
-                    text: "Year",
-                    value: 4
-                },
-                {
-                    text: "Subject",
-                    value: 5
-                },
-            ],
+            filter_options_bar_chart: [],
+            filter_options_stack_chart: [],
+            filter_options_summary: [],
             chart_options: [
                 {
                     text: "Marks for subjects",
@@ -83,7 +36,6 @@ class DashBoard extends Component {
             total: '',
             filter: '',
             chart_type: ''
-
         };
     }
 
@@ -205,6 +157,17 @@ class DashBoard extends Component {
         });
     };
 
+    // Get initial data for drop down list options
+    componentDidMount(){
+        const barchartOptions = APIManager.getBarChartOptions();
+        const stackchartOptions = APIManager.getStackChartOptions();
+        const summaryOptions = APIManager.getSummaryOptions();
+        this.setState({
+            filter_options_bar_chart:barchartOptions,
+            filter_options_stack_chart:stackchartOptions,
+            filter_options_summary:summaryOptions
+        })
+    }
 
     render() {
         return (
