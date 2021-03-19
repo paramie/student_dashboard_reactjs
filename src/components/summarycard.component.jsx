@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
 class SummaryCard extends Component {
-    
+
     render() {
         return (
             <React.Fragment>
                 <div class="card mb-5">
                     <p className="p-2 mb-4  blue-grey lighten-5 blue-grey lighten-5">
-                        Title - {this.props.title}
+                        Total Marks for the {this.props.filter}
                     </p>
                     <h3 className="h3-responsive font-weight-bold mr-3">
                         Filtered By - {this.props.filter}

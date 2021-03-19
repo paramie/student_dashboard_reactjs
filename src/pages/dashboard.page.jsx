@@ -73,12 +73,7 @@ class DashBoard extends Component {
 
     // Create and add summary object to 'summeries' array in the state
     addSummary = () => {
-        if (this.state.title.trim() == null || this.state.title.trim() == '') {
-            alert("invalid Title");
-            return false
-        }
-        else {
-            var total_marks = this.getTotalMarksForSummary(this.state.filter)
+        var total_marks = this.getTotalMarksForSummary(this.state.filter)
 
             var newArray = [...this.state.summaries];
             newArray.push({
@@ -90,7 +85,6 @@ class DashBoard extends Component {
             this.setState({ summaries: newArray });
 
             return true;
-        }
 
     };
 
@@ -240,16 +234,6 @@ class DashBoard extends Component {
                 </MDBModalHeader>
                     <MDBModalBody>
                         <form className="mx-3 grey-text">
-                            <MDBInput
-                                name="title"
-                                label="Title"
-                                icon="edit"
-                                hint="Summary Title"
-                                group
-                                type="text"
-                                getValue={this.handleInputChange("title")}
-                            />
-
                             <div>
                                 <label>Select Filter</label>
                                 <select className="browser-default custom-select" onChange={this.handleInputChange("filter")}>
@@ -271,7 +255,6 @@ class DashBoard extends Component {
                                     this.setState({
                                         filter: "",
                                         total: "",
-                                        title: ""
                                     });
                                 }
 
@@ -298,7 +281,7 @@ class DashBoard extends Component {
                                 name="title"
                                 label="Title"
                                 icon="edit"
-                                hint="Summary Title"
+                                hint="Chart Title"
                                 group
                                 type="text"
                                 getValue={this.handleInputChange("title")}
